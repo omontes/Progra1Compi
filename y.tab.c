@@ -64,12 +64,14 @@
 /* Copy the first part of user declarations.  */
 /* Line 371 of yacc.c  */
 #line 3 "token.y"
-
+  
+    extern int yylineno;
+    extern yytext;
     int count;
     void yyerror(char *s);
 
 /* Line 371 of yacc.c  */
-#line 73 "y.tab.c"
+#line 75 "y.tab.c"
 
 # ifndef YY_NULL
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -149,7 +151,7 @@ int yyparse ();
 /* Copy the second part of user declarations.  */
 
 /* Line 390 of yacc.c  */
-#line 153 "y.tab.c"
+#line 155 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -447,7 +449,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    27,    27,    28,    29,    32,    33,    34,    38
+       0,    29,    29,    30,    31,    34,    35,    36,    40
 };
 #endif
 
@@ -1332,37 +1334,37 @@ yyreduce:
     {
         case 2:
 /* Line 1787 of yacc.c  */
-#line 27 "token.y"
+#line 29 "token.y"
     {printf("%d\n",(yyvsp[(2) - (3)]));}
     break;
 
   case 5:
 /* Line 1787 of yacc.c  */
-#line 32 "token.y"
+#line 34 "token.y"
     {(yyval)=(yyvsp[(1) - (1)]);}
     break;
 
   case 6:
 /* Line 1787 of yacc.c  */
-#line 33 "token.y"
+#line 35 "token.y"
     {(yyval)= (yyvsp[(1) - (3)]) + (yyvsp[(3) - (3)]);}
     break;
 
   case 7:
 /* Line 1787 of yacc.c  */
-#line 34 "token.y"
+#line 36 "token.y"
     {(yyval)= (yyvsp[(1) - (3)]) - (yyvsp[(3) - (3)]);}
     break;
 
   case 8:
 /* Line 1787 of yacc.c  */
-#line 38 "token.y"
+#line 40 "token.y"
     {exit(0);}
     break;
 
 
 /* Line 1787 of yacc.c  */
-#line 1366 "y.tab.c"
+#line 1368 "y.tab.c"
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1594,11 +1596,11 @@ yyreturn:
 
 
 /* Line 2050 of yacc.c  */
-#line 43 "token.y"
+#line 45 "token.y"
 
 void yyerror(char *s){
     
-    printf("error sintactico: %s\n",s);
+    printf("error sintactico: %s en linea: %d con el texto: %s\n",s,yylineno,yytext);
 }
 
 

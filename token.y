@@ -1,6 +1,8 @@
 /**Define la gramatica **/
 
-%{
+%{  
+    extern int yylineno;
+    extern yytext;
     int count;
     void yyerror(char *s);
 %}
@@ -43,7 +45,7 @@ termino:
 %%
 void yyerror(char *s){
     
-    printf("error sintactico: %s\n",s);
+    printf("error sintactico: %s en linea: %d con el texto: %s\n",s,yylineno,yytext);
 }
 
 
