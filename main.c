@@ -35,14 +35,8 @@ main()
     fclose(yyin);
 }
 
-yyerror(s)
-char *s;
-{
-    printf("yacc error: %s\n", s);
-}
-
 yywrap()
-{
-    return(0);
+{   
+    return(1);
 }
 

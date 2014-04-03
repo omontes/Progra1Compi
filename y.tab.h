@@ -47,20 +47,18 @@ extern int yydebug;
       know about them.  */
    enum yytokentype {
      ID = 258,
-     OTRO = 259,
-     STOP = 260,
-     NUM = 261,
-     NUEVALINEA = 262,
-     ESPACIOENBLANCO = 263
+     STOP = 259,
+     NUM = 260,
+     NUEVALINEA = 261,
+     ESPACIOENBLANCO = 262
    };
 #endif
 /* Tokens.  */
 #define ID 258
-#define OTRO 259
-#define STOP 260
-#define NUM 261
-#define NUEVALINEA 262
-#define ESPACIOENBLANCO 263
+#define STOP 259
+#define NUM 260
+#define NUEVALINEA 261
+#define ESPACIOENBLANCO 262
 
 
 

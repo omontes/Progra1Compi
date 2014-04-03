@@ -9,6 +9,7 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>prueba</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -38,6 +39,8 @@
       <item path="lex.yy.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="prueba" ex="false" tool="3" flavor2="0">
       </item>
       <item path="token.l" ex="false" tool="3" flavor2="0">
         <customTool>

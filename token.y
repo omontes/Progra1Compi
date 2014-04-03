@@ -2,13 +2,13 @@
 
 %{
     int count;
-    
+    void yyerror(char *s);
 %}
 
-%token ID OTRO STOP NUM NUEVALINEA ESPACIOENBLANCO
+%token ID STOP NUM NUEVALINEA ESPACIOENBLANCO
 
 %%
-start :
+/*start :
     | start something
     ;
 
@@ -17,12 +17,33 @@ something : NUM {printf("NUM ");}
                     printf("VAR ");}
     | NUEVALINEA {printf("NUEVALINEA\n");}
     | ESPACIOENBLANCO{printf("ESPACIOS ");}
-    | OTRO {printf("OTRO ");}
     | STOP {    printf("cant vars = %d\n",count);
-                exit(0);}
+                yywrap();}
                 
                 
-        ;
+        ;*/
+        
+start :
+                start expr NUEVALINEA   {printf("%d\n",$2);}
+                | start termino   
+                | 
+                ;
+expr:
+                NUM {$$=$1;}
+                | expr '+' expr {$$= $1 + $3;}
+                | expr '-' expr {$$= $1 - $3;}
+                
+                ;
+termino:        
+                STOP {exit(0);} 
+                ;
+                
+
+        
 %%
+void yyerror(char *s){
+    
+    printf("error sintactico: %s\n",s);
+}
 
 
