@@ -777,12 +777,12 @@ return STOP;
 case 3:
 YY_RULE_SETUP
 #line 10 "token.l"
-return NUM;
+{printf("%s ",yytext);return NUM;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 11 "token.l"
-return ID;
+{printf("%s ",yytext);return ID;}
 	YY_BREAK
 case 5:
 /* rule 5 can match eol */

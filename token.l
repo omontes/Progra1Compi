@@ -7,8 +7,8 @@ letra  [A-Za-z]
 %%
 "pare"   return STOP;
 "PARE"   return STOP;
-{digito}{digito}*   return NUM;
-({letra}|_)(({letra}|{digito}){0,31})  return ID;
+{digito}{digito}*   {printf("%s ",yytext);return NUM;}
+({letra}|_)(({letra}|{digito}){0,31})  {printf("%s ",yytext);return ID;}
 \n      return NUEVALINEA;
 [ \t\n]+  return ESPACIOENBLANCO;
 .     return OTRO;

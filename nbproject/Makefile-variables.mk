@@ -9,11 +9,11 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=lexyacc
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/lexyacc
+CND_ARTIFACT_NAME_Debug=primerprogracompi
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/primerprogracompi
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=lexyacc.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/lexyacc.tar
+CND_PACKAGE_NAME_Debug=primerprogracompi.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/primerprogracompi.tar
 #
 # include compiler specific variables
 #
